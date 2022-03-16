@@ -36,5 +36,10 @@ public class TopicService {
     }
 
     public void addTopic(Topic topic) {
+        topics.add(topic);
+    }
+
+    public void deleteTopic(String id, Topic topic) {
+        topics.removeIf(t -> t.getLang().equals(id));
     }
 }
